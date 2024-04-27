@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-
+const themeColor = document.getElementById('theme-color');
 hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
@@ -26,8 +26,10 @@ const toggleSwitch = document.querySelector(
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
+    themeColor.content = "#000000"
   } else {
     document.documentElement.setAttribute("data-theme", "light");
+    themeColor.content = "#ffffff"
   }
 }
 
@@ -39,9 +41,11 @@ function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark"); //add this
+    themeColor.content = "#000000"
   } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light"); //add this
+    themeColor.content = "#ffffff"
   }
 }
 
