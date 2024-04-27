@@ -69,8 +69,12 @@ h2::selection {
   transform: rotate(250deg);
 }
 
+.sun{
+  transform: rotate(-90deg);
+}
+
 #switch:checked + .toggle-icons .sun {
-  transform: rotate(100deg);
+  transform: rotate(20deg);
 }
 
 /* Header Container */
