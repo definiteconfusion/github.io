@@ -335,3 +335,8 @@ body {
     width: 80%;
   }
 }
+
+
+meta[name="theme-color"] {
+            content: var(--bg-primary);
+        }
