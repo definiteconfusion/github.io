@@ -63,6 +63,7 @@ h2::selection {
 
 .moon {
   transform: rotate(10deg);
+  filter: invert(1);
 }
 
 #switch:checked + .toggle-icons .moon {
