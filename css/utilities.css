@@ -38,6 +38,10 @@ h2::selection {
   color: var(--bg-primary);
   font-family: "JetBrains Mono", monospace;
 }
+.btn-secondary:hover {
+  filter: drop-shadow(0rem 0.5rem 0.5rem var(--primary-color));
+  transform: translate(-0rem, -0.5rem);
+}
 
 /* add hover to resume button */
 .btn-primary:hover {
