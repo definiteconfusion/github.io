@@ -82,38 +82,3 @@ function getClientIPv4(callback) {
             callback(null);
         });
 }
-
-// Function to send the IPv4 address to the server
-function sendIPv4ToServer(ipv4) {
-    if (!ipv4) {
-        console.error('Invalid IPv4 address');
-        return;
-    }
-
-    // Prepare JSON data
-    const jsonData = {
-        ipv4: ipv4
-    };
-
-    // Send JSON data to the server
-    fetch('http://96.233.77.28:8001', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(jsonData)
-    })
-    .then(response => {
-        if (response.ok) {
-            console.log('Telemetry sent successfully:', ipv4);
-        } else {
-            console.error('Failed to send Telemetry to server');
-        }
-    })
-    .catch(error => {
-        console.error('Error sending Telemetry to server:', error);
-    });
-}
-
-// Usage: Call getClientIPv4 to get the IPv4 address and then send it to the server
-getClientIPv4(sendIPv4ToServer);
